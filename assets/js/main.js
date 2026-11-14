@@ -47,6 +47,18 @@
   dlg.addEventListener('click', (e) => { if (e.target === dlg) chiudi(); });
   dlg.addEventListener('close', () => { vid.pause(); document.body.classList.remove('no-scroll'); });
 
+  // «Scrivici»: Gmail, Outlook, programma di posta, copia dell'indirizzo (il solo mailto non fa nulla senza un programma di posta)
+  const md = document.getElementById('mailDlg'), cp = document.getElementById('mailCopy');
+  document.getElementById('scrivici').addEventListener('click', () => { if (md.showModal) md.showModal(); else md.setAttribute('open', ''); });
+  document.getElementById('mailClose').addEventListener('click', () => md.close());
+  md.addEventListener('click', (e) => { if (e.target === md) md.close(); });
+  cp.addEventListener('click', async () => {
+    const ok = () => { cp.textContent = 'Indirizzo copiato ✓'; setTimeout(() => { cp.textContent = 'Copia l’indirizzo'; }, 2500); };
+    try { await navigator.clipboard.writeText('fse@gp1.it'); ok(); }
+    catch (e) { const t = document.createElement('textarea'); t.value = 'fse@gp1.it'; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); ok(); } catch (_) {} t.remove(); }
+  });
+
   // menu su telefono
   const t = document.getElementById('navToggle'), nav = document.getElementById('nav');
   t.addEventListener('click', () => { const o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });

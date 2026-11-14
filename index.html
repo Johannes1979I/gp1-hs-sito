@@ -144,7 +144,7 @@
         <p class="eyebrow">Contatti</p>
         <h2>Parliamo della vostra struttura</h2>
         <p class="sub">Raccontateci come lavorate: prepariamo una proposta su misura, in acquisto o in noleggio.</p>
-        <a class="btn btn--primary" href="mailto:fse@gp1.it?subject=Richiesta%20informazioni%20GP1%20HS">Scrivici</a>
+        <button class="btn btn--primary" id="scrivici" type="button">Scrivici</button>
       </div>
       <ul class="contacts__list">
         <li><span>Email</span><a href="mailto:fse@gp1.it">fse@gp1.it</a></li>
@@ -164,6 +164,21 @@
     <p class="foot__small">EndlessMed, LIS Med, FSE Sender e Surgery Med sono prodotti GP1 HS.</p>
   </div>
 </footer>
+
+<dialog class="mail" id="mailDlg" aria-labelledby="mailTitle">
+  <div class="mail__box">
+    <button class="mail__close" id="mailClose" aria-label="Chiudi">×</button>
+    <h3 id="mailTitle">Scriveteci</h3>
+    <p class="mail__addr">fse@gp1.it</p>
+    <div class="mail__opts">
+      <a class="btn btn--primary" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fse@gp1.it&amp;su=Richiesta%20informazioni%20GP1%20HS">Scrivi con Gmail</a>
+      <a class="btn btn--ghost" target="_blank" rel="noopener" href="https://outlook.live.com/mail/0/deeplink/compose?to=fse@gp1.it&amp;subject=Richiesta%20informazioni%20GP1%20HS">Scrivi con Outlook</a>
+      <a class="btn btn--ghost" href="mailto:fse@gp1.it?subject=Richiesta%20informazioni%20GP1%20HS">Programma di posta</a>
+      <button class="btn btn--ghost" type="button" id="mailCopy">Copia l’indirizzo</button>
+    </div>
+    <p class="mail__alt">Oppure chiamateci: <a href="tel:+393277565727">327 756 5727</a></p>
+  </div>
+</dialog>
 
 <dialog class="player" id="player" aria-label="Video">
   <div class="player__box">

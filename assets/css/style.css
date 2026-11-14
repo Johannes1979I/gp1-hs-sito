@@ -138,6 +138,19 @@ h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin: 0 0 12px; l
 .player__close { background: none; border: 0; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 0 6px; }
 .player video { display: block; width: 100%; max-height: 80vh; background: #000; }
 
+/* finestra «Scrivici» */
+.mail { border: 0; padding: 0; background: transparent; width: min(480px, 100% - 32px); }
+.mail::backdrop { background: rgba(8, 15, 28, .7); }
+.mail__box { position: relative; background: #fff; border-radius: 18px; padding: 30px 28px 24px; box-shadow: 0 30px 60px rgba(0, 0, 0, .3); }
+.mail__box h3 { margin: 0 0 4px; font-size: 22px; }
+.mail__addr { margin: 0 0 20px; font-size: 20px; font-weight: 700; color: var(--red); overflow-wrap: anywhere; }
+.mail__opts { display: grid; gap: 10px; }
+.mail__opts .btn { width: 100%; font-family: inherit; }
+.mail__alt { margin: 18px 0 0; color: var(--ink-2); font-size: 15px; }
+.mail__alt a { font-weight: 700; color: var(--ink); }
+.mail__close { position: absolute; right: 14px; top: 10px; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer; color: var(--muted); }
+button.btn { font-family: inherit; }
+
 /* schermi piccoli */
 @media (max-width: 960px) {
   .hero__grid, .contacts { grid-template-columns: 1fr; gap: 36px; }
