@@ -78,6 +78,20 @@ h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin: 0 0 12px; l
 .section--alt { background: var(--bg-alt); }
 .h3 { font-size: 20px; margin: 40px 0 18px; }
 
+/* ecosistema */
+.eco { padding-bottom: 40px; }
+.eco__grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.eco h2 .accent { color: var(--red); }
+.eco .sub { margin-bottom: 0; }
+.eco__scale { background: linear-gradient(160deg, var(--navy), #1c3b66); color: #fff; border-radius: 20px; padding: 28px 30px; box-shadow: var(--shadow); }
+.eco__scale-tit { margin: 0 0 16px; font-weight: 700; color: #f1d58b; font-size: 15px; letter-spacing: .02em; }
+.eco__scale ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.eco__scale li { position: relative; padding: 12px 0 12px 46px; border-top: 1px solid rgba(255, 255, 255, .12); counter-increment: s; }
+.eco__scale li:first-child { border-top: 0; }
+.eco__scale li::before { content: counter(s); position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 14px; background: rgba(255, 255, 255, .12); }
+.eco__scale li strong { display: block; font-size: 16px; }
+.eco__scale li span { font-size: 14px; color: #cdd6e6; }
+
 /* prodotti */
 .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .product { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; border-top: 4px solid var(--gold); }
@@ -153,7 +167,7 @@ button.btn { font-family: inherit; }
 
 /* schermi piccoli */
 @media (max-width: 960px) {
-  .hero__grid, .contacts { grid-template-columns: 1fr; gap: 36px; }
+  .hero__grid, .contacts, .eco__grid { grid-template-columns: 1fr; gap: 36px; }
   .products { grid-template-columns: repeat(2, 1fr); }
   .why { grid-template-columns: repeat(2, 1fr); }
   .cards--3 { grid-template-columns: 1fr 1fr; }
