@@ -1,0 +1,118 @@
+{
+ "ai-med": {
+  "durata": 27,
+  "mb": 0.8
+ },
+ "booking-med": {
+  "durata": 70,
+  "mb": 4.5
+ },
+ "card-med": {
+  "durata": 54,
+  "mb": 2.9
+ },
+ "cardio-med": {
+  "durata": 39,
+  "mb": 1.2
+ },
+ "cashflow-med": {
+  "durata": 58,
+  "mb": 2.6
+ },
+ "checklist-med": {
+  "durata": 46,
+  "mb": 2.2
+ },
+ "design-med": {
+  "durata": 47,
+  "mb": 2.9
+ },
+ "em-helpdesk": {
+  "durata": 34,
+  "mb": 2.0
+ },
+ "em-sensor": {
+  "durata": 55,
+  "mb": 1.9
+ },
+ "entry-med": {
+  "durata": 66,
+  "mb": 3.4
+ },
+ "fse-sender": {
+  "durata": 102,
+  "mb": 5.7
+ },
+ "gest-med": {
+  "durata": 51,
+  "mb": 2.0
+ },
+ "lis-med": {
+  "durata": 138,
+  "mb": 7.3
+ },
+ "message-med": {
+  "durata": 34,
+  "mb": 1.5
+ },
+ "online-med": {
+  "durata": 39,
+  "mb": 1.8
+ },
+ "pacs-med": {
+  "durata": 48,
+  "mb": 3.3
+ },
+ "pharmacy-med": {
+  "durata": 47,
+  "mb": 1.4
+ },
+ "report-med": {
+  "durata": 42,
+  "mb": 2.9
+ },
+ "sample-med": {
+  "durata": 45,
+  "mb": 3.3
+ },
+ "stats-med": {
+  "durata": 55,
+  "mb": 2.5
+ },
+ "sterilizzazione": {
+  "durata": 95,
+  "mb": 3.8
+ },
+ "store-med": {
+  "durata": 46,
+  "mb": 1.8
+ },
+ "surgery-med": {
+  "durata": 152,
+  "mb": 6.3
+ },
+ "tsrm-med": {
+  "durata": 44,
+  "mb": 2.5
+ },
+ "turni-med": {
+  "durata": 46,
+  "mb": 1.9
+ },
+ "wiki-med": {
+  "durata": 34,
+  "mb": 1.4
+ },
+ "video-endlessmed-completo": {
+  "durata": 246,
+  "mb": 29.0
+ },
+ "video-endlessmed-suite": {
+  "durata": 144,
+  "mb": 17.5
+ },
+ "video-fse-sender": {
+  "durata": 122,
+  "mb": 12.8
+ }
+}
