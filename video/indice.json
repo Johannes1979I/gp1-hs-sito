@@ -60,16 +60,16 @@
   "mb": 1.8
  },
  "pacs-med": {
-  "durata": 48,
-  "mb": 3.3
+  "durata": 72,
+  "mb": 4.5
  },
  "pharmacy-med": {
   "durata": 47,
   "mb": 1.4
  },
  "report-med": {
-  "durata": 42,
-  "mb": 2.9
+  "durata": 118,
+  "mb": 5.4
  },
  "sample-med": {
   "durata": 45,
