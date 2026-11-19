@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261119">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261119b">
 </head>
 <body class="pg-thr">
 
@@ -76,7 +76,7 @@
         niente numeri inventati, niente scorciatoie sulla sicurezza del paziente.</p>
       <div class="pillars">
         <div class="pillar"><span class="pillar__ico" aria-hidden="true">📚</span><h3>Fonti verificate, non numeri inventati</h3>
-          <p>Gli alimenti vengono da CREA, Ciqual e USDA, i fabbisogni dai LARN della SINU. Se un nutriente manca in tutte le fonti resta vuoto: non diventa mai zero.</p></div>
+          <p>Gli alimenti vengono da CREA, Ciqual e USDA, i livelli di riferimento dai LARN della SINU. Se un nutriente manca in tutte le fonti resta vuoto: non diventa mai zero.</p></div>
         <div class="pillar"><span class="pillar__ico" aria-hidden="true">🛡️</span><h3>Il paziente al sicuro</h3>
           <p>Allergeni, intolleranze ed esclusioni formano un filtro che nessuna funzione può aggirare. Un alimento a rischio non viene mai proposto, neanche quando la modifica si chiede a parole.</p></div>
         <div class="pillar"><span class="pillar__ico" aria-hidden="true">🧠</span><h3>Un’IA che impara il tuo metodo</h3>
@@ -116,9 +116,9 @@
           <p>L’anamnesi segue un percorso a passi: familiare, remota e prossima, patologie, farmaci, stile di vita, alimentazione, segni e sintomi, obiettivi.
             Le patologie si cercano in un catalogo di circa 680 voci con il codice ICD-10.</p>
           <ul class="checks">
-            <li>Ogni voce porta le sue indicazioni alimentari, come i limiti di zuccheri aggiunti e grassi saturi. Il professionista può sempre cambiarle</li>
             <li>Farmaci e integratori si scelgono da elenco: oltre 130.000 voci fra la Banca dati AIFA e il registro del Ministero della Salute</li>
-            <li>Threpsis riconosce le interazioni note fra farmaci e dieta, come warfarin e vitamina K, e cita la fonte</li>
+            <li>Tutto resta nella cartella del paziente, consultabile nelle visite successive</li>
+            <li>Esclusioni e limiti del piano alimentare li imposta o li conferma il professionista</li>
           </ul>
         </div>
       </article>
@@ -132,22 +132,22 @@
           <ul class="checks">
             <li>Con le scelte rapide si includono o si escludono categorie intere e singoli alimenti</li>
             <li>Si registrano anche preferenze, abitudini e alimenti graditi</li>
-            <li>Il filtro vale per il generatore, per i piani modello e per ogni modifica fatta a mano o a parole</li>
+            <li>Le esclusioni valgono per il generatore, per i piani modello e per ogni modifica fatta a mano o a parole</li>
           </ul>
         </div>
       </article>
 
       <article class="feat">
-        <button class="shot zoom" type="button" data-src="assets/img/threpsis/clinici.jpg" data-cap="Dati clinici: misure, plicometria e bioimpedenza Akern con grafico BIVA"><img src="assets/img/threpsis/clinici.jpg" alt="Dati clinici con bioimpedenza e grafico BIVA" loading="lazy"></button>
+        <button class="shot zoom" type="button" data-src="assets/img/threpsis/bioimpedenza.jpg" data-cap="Dati clinici: import dei valori dal bioimpedenziometro, con la loro fonte"><img src="assets/img/threpsis/bioimpedenza.jpg" alt="Import dei valori di bioimpedenza da Akern e da altri dispositivi" loading="lazy"></button>
         <div class="feat__txt">
           <span class="feat__num">4</span>
           <h3>Misure, pliche e bioimpedenza</h3>
-          <p>Peso, altezza, circonferenze e pliche diventano subito indici: BMI, rischio legato alla circonferenza vita, metabolismo basale con l’equazione più adatta
-            e massa grassa con Jackson-Pollock.</p>
+          <p>Peso, altezza, circonferenze e pliche si registrano a ogni visita. Ne derivano i parametri che servono a dimensionare il piano:
+            BMI, metabolismo basale e fabbisogno secondo i LARN.</p>
           <ul class="checks">
-            <li>Bioimpedenza Akern: Rz e Xc dallo strumento, oppure i valori di Bodygram importati con la loro fonte</li>
-            <li>Vettore BIVA sulle ellissi di riferimento</li>
-            <li>Si usano solo equazioni pubblicate e citate, mai fuori dal loro campo di validità. Le formule proprietarie non vengono ricostruite</li>
+            <li>Bioimpedenza: i valori calcolati dal software del dispositivo (Akern Bodygram, ACCUNIQ, InBody, Tanita…) si importano dal file e si mostrano con la loro fonte</li>
+            <li>Ogni formula usata è pubblicata e citata</li>
+            <li>Le misure di ogni visita restano nello storico del paziente</li>
           </ul>
         </div>
       </article>
@@ -157,7 +157,7 @@
         <div class="feat__txt">
           <span class="feat__num">5</span>
           <h3>Esami e questionari validati</h3>
-          <p>Gli esami del sangue si scrivono a mano o si importano dal PDF del referto. I questionari validati si calcolano mentre la paziente risponde.</p>
+          <p>Gli esami del sangue si scrivono a mano o si importano dal PDF del referto, con gli intervalli di riferimento del laboratorio. I questionari validati si calcolano mentre la paziente risponde.</p>
           <ul class="checks">
             <li>MEDAS (aderenza alla dieta mediterranea), MUST, SARC-F, IPAQ</li>
             <li>Ogni questionario resta nello storico, con il suo andamento nel tempo</li>
@@ -166,29 +166,11 @@
       </article>
 
       <article class="feat">
-        <div class="shot-pair">
-          <button class="shot zoom" type="button" data-src="assets/img/threpsis/prospetto.jpg" data-cap="Prospetto: valori, soglie delle linee guida e fonti numerate"><img src="assets/img/threpsis/prospetto.jpg" alt="Prospetto con riferimenti alle linee guida" loading="lazy"></button>
-          <button class="shot zoom" type="button" data-src="assets/img/threpsis/riformula.jpg" data-cap="L’assistente IA riscrive la spiegazione senza ricevere dati identificativi"><img src="assets/img/threpsis/riformula.jpg" alt="Spiegazione riformulata dall’assistente IA" loading="lazy"></button>
-        </div>
-        <div class="feat__txt">
-          <span class="feat__num">6</span>
-          <h3>Il prospetto, con le linee guida e le fonti</h3>
-          <p>Il prospetto mette in ordine i valori della paziente accanto alle soglie delle linee guida pubblicate (OMS, ADA, ESC, ESH, KDIGO) e alle indicazioni CREA e LARN.
-            Accanto a ogni voce c’è la sua fonte, numerata.</p>
-          <ul class="checks">
-            <li>I valori da approfondire sono segnalati per il confronto con il medico</li>
-            <li>La spiegazione discorsiva ha le fonti numerate. L’assistente IA ne scrive una versione più scorrevole: al modello arrivano solo età, sesso e valori, mai il nome</li>
-            <li>La valutazione e la scelta restano del professionista: il programma non applica nulla senza la sua conferma</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="feat">
         <button class="shot zoom" type="button" data-src="assets/img/threpsis/tipo.jpg" data-cap="Tipo di dieta e obiettivo: calo consigliato, energia e data di arrivo"><img src="assets/img/threpsis/tipo.jpg" alt="Scelta del tipo di dieta e dell’obiettivo" loading="lazy"></button>
         <div class="feat__txt">
-          <span class="feat__num">7</span>
+          <span class="feat__num">6</span>
           <h3>Tipo di dieta e obiettivo</h3>
-          <p>Il professionista sceglie fra 179 tipi di dieta, dalla mediterranea alla DASH. L’obiettivo diventa energia: calo consigliato, calorie giornaliere e data di arrivo stimata.</p>
+          <p>Il professionista sceglie il modello fra 179 tipi di dieta, dalla mediterranea alla DASH, e fissa l’obiettivo. Threpsis lo traduce in energia: calo settimanale, calorie giornaliere e data di arrivo stimata.</p>
           <ul class="checks">
             <li>319 piani modello pronti, già verificati, divisi per famiglia e per fascia di energia</li>
             <li>Lo studio può salvare i propri piani, con nome, etichette e note</li>
@@ -203,9 +185,9 @@
           <button class="shot zoom" type="button" data-src="assets/img/threpsis/bilancio.jpg" data-cap="Qualità del piano e bilanciamento dei macronutrienti"><img src="assets/img/threpsis/bilancio.jpg" alt="Bilanciamento dei macronutrienti" loading="lazy"></button>
         </div>
         <div class="feat__txt">
-          <span class="feat__num">8</span>
+          <span class="feat__num">7</span>
           <h3>Genera Dieta AI: la settimana in pochi secondi</h3>
-          <p>Un clic compone l’intera settimana: ogni pasto ha grammi, alternative e preparazione, sempre dentro il filtro di sicurezza della paziente.</p>
+          <p>Un clic compone l’intera settimana dentro i vincoli scelti dal professionista: modello di dieta, energia, macronutrienti, esclusioni e allergeni registrati. Ogni pasto ha grammi, alternative e preparazione.</p>
           <ul class="checks">
             <li>Ogni giorno resta nella tolleranza calorica fissata</li>
             <li>La qualità del piano si legge a colpo d’occhio, con i riferimenti CREA e LARN: frequenze di legumi, pesce, frutta, verdura e varietà</li>
@@ -217,7 +199,7 @@
       <article class="feat">
         <button class="shot zoom" type="button" data-src="assets/img/threpsis/comando.jpg" data-cap="Riga di comando: la modifica chiesta in italiano, con anteprima"><img src="assets/img/threpsis/comando.jpg" alt="Modifica della dieta con un comando scritto" loading="lazy"></button>
         <div class="feat__txt">
-          <span class="feat__num">9</span>
+          <span class="feat__num">8</span>
           <h3>Le modifiche si chiedono a parole</h3>
           <p>«A cena sostituisci il pane di segale con il pane integrale.» Threpsis capisce la richiesta, mostra l’anteprima giorno per giorno e controlla per la paziente ogni nuovo alimento.</p>
           <ul class="checks">
@@ -244,7 +226,7 @@
           <li><strong>Applica</strong><span>la dieta nuova segue già la regola</span></li>
         </ol>
         <p class="learn__note">Le regole sono di chi le ha create: gli altri professionisti dello studio hanno le loro. Restano sempre dentro il filtro di sicurezza
-          (allergie, patologie, farmaci, tipo di dieta), si vedono in chiaro e ognuna si dimentica con un clic. Per imparare non servono i dati dei pazienti.</p>
+          (allergeni, esclusioni e tipo di dieta scelti dal professionista), si vedono in chiaro e ognuna si dimentica con un clic. Per imparare non servono i dati dei pazienti.</p>
       </div>
       <button class="shot shot--dark zoom" type="button" data-src="assets/img/threpsis/impara.jpg" data-cap="«Cosa ha imparato il generatore»: regole apprese e ultimi comandi"><img src="assets/img/threpsis/impara.jpg" alt="Finestra con le regole apprese dal generatore" loading="lazy"></button>
     </div>
@@ -255,7 +237,7 @@
       <article class="feat feat--first">
         <button class="shot zoom" type="button" data-src="assets/img/threpsis/pdf.jpg" data-cap="Il PDF della dieta, con il layout dello studio"><img src="assets/img/threpsis/pdf.jpg" alt="Anteprima del PDF della dieta" loading="lazy"></button>
         <div class="feat__txt">
-          <span class="feat__num">10</span>
+          <span class="feat__num">9</span>
           <h3>Il PDF dello studio, firmato e inviato</h3>
           <p>Ecco la dieta come la leggerà la paziente, con ricette e preparazioni. Il PDF segue il layout dello studio e si firma e si invia direttamente dal programma.</p>
           <ul class="checks">
@@ -269,7 +251,7 @@
       <article class="feat">
         <div class="phone-wrap"><button class="shot shot--phone zoom" type="button" data-src="assets/img/threpsis/app.jpg" data-cap="L’app MyThrepsis sul telefono della paziente"><img src="assets/img/threpsis/app.jpg" alt="App MyThrepsis con il piano settimanale" loading="lazy"></button></div>
         <div class="feat__txt">
-          <span class="feat__num">11</span>
+          <span class="feat__num">10</span>
           <h3>L’app MyThrepsis per il paziente</h3>
           <p>Con l’app MyThrepsis la paziente ha la dieta sul telefono. Ci trova i pasti di oggi, la settimana, la lista della spesa, i progressi e la chat con lo studio.</p>
           <ul class="checks">
@@ -282,7 +264,7 @@
       <article class="feat">
         <button class="shot zoom" type="button" data-src="assets/img/threpsis/monitor.jpg" data-cap="Monitoraggio: andamento e confronto tra le visite"><img src="assets/img/threpsis/monitor.jpg" alt="Grafici dell’andamento nelle visite di controllo" loading="lazy"></button>
         <div class="feat__txt">
-          <span class="feat__num">12</span>
+          <span class="feat__num">11</span>
           <h3>Monitoraggio delle visite di controllo</h3>
           <p>Nelle visite di controllo il monitoraggio mostra l’andamento di peso, circonferenze e massa grassa, e il confronto fra la prima visita e l’ultima.</p>
           <ul class="checks">
@@ -299,7 +281,7 @@
     <div class="wrap sim">
       <div class="sim__txt">
         <p class="eyebrow eyebrow--thr">Simulazione AI del risultato</p>
-        <h2>La paziente vede dove la porta il piano</h2>
+        <h2>Un’immagine indicativa per motivare la paziente</h2>
         <p>Si carica una foto, si sceglie l’orizzonte (da 4 settimane a un anno) e si registra il consenso esplicito.
           <strong>Il peso di arrivo non lo inventa l’intelligenza artificiale: lo calcola Threpsis dalla dieta.</strong>
           Il calcolo usa un calo da 0,25 a 0,9 kg a settimana, che rallenta col tempo, e non scende mai sotto un BMI di 21 né sotto il peso desiderato.</p>
@@ -362,10 +344,10 @@
       <h2>L’IA aiuta, il professionista decide</h2>
       <div class="why">
         <div><h3>Il servizio lo sceglie lo studio</h3><p>Le funzioni di IA si accendono solo se lo studio le configura. Si può usare un servizio esterno o, per la foto, un PC dello studio.</p></div>
-        <div><h3>Nessun dato identificativo</h3><p>Per riscrivere la spiegazione il modello riceve età, sesso e valori. Non riceve mai nome, codice fiscale o recapiti.</p></div>
+        <div><h3>Il volto resta fuori</h3><p>Prima di inviare la foto al servizio di IA il volto si può tagliare via. Nome e codice fiscale non vengono inviati.</p></div>
         <div><h3>Consenso e blocchi</h3><p>La simulazione su foto chiede il consenso esplicito e si blocca da sola nei casi in cui non è opportuna.</p></div>
         <div><h3>Regole trasparenti</h3><p>Ciò che il generatore impara si vede in chiaro e si dimentica con un clic: niente scatole nere.</p></div>
-        <div><h3>La sicurezza non si scavalca</h3><p>Generatore, riga di comando e regole apprese passano tutti dallo stesso filtro di sicurezza del paziente.</p></div>
+        <div><h3>Gli allergeni non si scavalcano</h3><p>Generatore, riga di comando e regole apprese rispettano tutti le esclusioni e gli allergeni registrati dal professionista.</p></div>
         <div><h3>Dove stanno i dati</h3><p>Threpsis si installa sul server dello studio e si usa dal browser di ogni computer, oppure in versione per Windows su un solo PC.</p></div>
       </div>
     </div>
@@ -379,7 +361,7 @@
       </div>
       <div class="faq__list">
         <details><summary>Per chi è Threpsis?</summary><p>Per nutrizionisti, dietisti e medici che seguono pazienti per l’alimentazione: dallo studio singolo al poliambulatorio con più professionisti, ognuno con i suoi utenti e le sue regole.</p></details>
-        <details><summary>L’intelligenza artificiale è obbligatoria?</summary><p>No. Il generatore, i piani modello, i controlli di sicurezza e le fonti funzionano dentro Threpsis. Le funzioni che usano un servizio di IA esterno, come la riscrittura dei testi e la simulazione su foto, si accendono solo se lo studio le configura.</p></details>
+        <details><summary>L’intelligenza artificiale è obbligatoria?</summary><p>No. Il generatore, i piani modello, i controlli di sicurezza e le fonti funzionano dentro Threpsis. Le funzioni che usano un servizio di IA esterno, come la simulazione su foto, si accendono solo se lo studio le configura.</p></details>
         <details><summary>Il generatore decide al posto mio?</summary><p>No. Tipo di dieta, obiettivo ed esclusioni li sceglie e li conferma il professionista. Il generatore compone i pasti dentro quei vincoli, e ogni proposta si corregge prima di salvarla.</p></details>
         <details><summary>Le regole apprese valgono per tutti i colleghi?</summary><p>No: ogni professionista ha le sue. Le regole nascono dalle correzioni ripetute in diete diverse, si vedono in chiaro e si possono dimenticare una per una.</p></details>
         <details><summary>Funziona con EndlessMed?</summary><p>Sì. Le accettazioni di EndlessMed arrivano in Threpsis con i dati del paziente: non si scrive niente due volte.</p></details>
@@ -422,7 +404,7 @@
     <img src="assets/img/logo-gp1hs.png" alt="" width="48" height="36">
     <p>GP1 HS S.R.L.S. · Via Igino Garbini 25/D, Viterbo · <a href="mailto:fse@gp1.it">fse@gp1.it</a></p>
     <p class="foot__small">Threpsis, EndlessMed, LIS Med, FSE Sender e Surgery Med sono prodotti GP1 HS. Le immagini di questa pagina vengono dalla copia dimostrativa:
-      pazienti, studio e valori sono inventati. Threpsis è uno strumento per il professionista della nutrizione e non sostituisce la valutazione del medico.</p>
+      pazienti, studio e valori sono inventati. Threpsis è un software gestionale e di pianificazione alimentare per i professionisti della nutrizione: le scelte sul paziente restano del professionista e la valutazione clinica dei referti spetta al medico.</p>
   </div>
 </footer>
 
@@ -456,6 +438,6 @@
   </figure>
 </dialog>
 
-<script src="assets/js/main.js?v=20261119"></script>
+<script src="assets/js/main.js?v=20261119b"></script>
 </body>
 </html>
