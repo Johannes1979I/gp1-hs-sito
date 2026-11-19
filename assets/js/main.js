@@ -10,19 +10,22 @@
       <span class="vcard__txt"><strong>${v.titolo}</strong><span>${v.testo}</span></span>
     </button>`;
 
-  document.getElementById('panoramica').innerHTML = V.panoramica.map(v => card(v, true)).join('');
-  document.getElementById('moduli').innerHTML = V.moduli.map(v => card(v)).join('');
-
-  // filtri per area
+  // catalogo dei video: solo nella pagina principale (le pagine dei prodotti non caricano video.js)
   const filtri = document.getElementById('filtri');
-  filtri.innerHTML = [{ id: 'tutti', nome: 'Tutti' }, ...V.aree].map((a, i) =>
-    `<button class="chip${i ? '' : ' is-on'}" role="tab" aria-selected="${!i}" data-area="${a.id}">${a.nome}</button>`).join('');
-  const filtra = (area) => {
-    filtri.querySelectorAll('.chip').forEach(c => { const on = c.dataset.area === area; c.classList.toggle('is-on', on); c.setAttribute('aria-selected', on); });
-    document.querySelectorAll('#moduli .vcard').forEach(c => { c.hidden = !(area === 'tutti' || c.dataset.area === area); });
-  };
-  filtri.addEventListener('click', (e) => { const c = e.target.closest('.chip'); if (c) filtra(c.dataset.area); });
-  document.querySelectorAll('[data-filtro]').forEach(a => a.addEventListener('click', () => filtra('tutti')));
+  if (V && filtri) {
+    document.getElementById('panoramica').innerHTML = V.panoramica.map(v => card(v, true)).join('');
+    document.getElementById('moduli').innerHTML = V.moduli.map(v => card(v)).join('');
+
+    // filtri per area
+    filtri.innerHTML = [{ id: 'tutti', nome: 'Tutti' }, ...V.aree].map((a, i) =>
+      `<button class="chip${i ? '' : ' is-on'}" role="tab" aria-selected="${!i}" data-area="${a.id}">${a.nome}</button>`).join('');
+    const filtra = (area) => {
+      filtri.querySelectorAll('.chip').forEach(c => { const on = c.dataset.area === area; c.classList.toggle('is-on', on); c.setAttribute('aria-selected', on); });
+      document.querySelectorAll('#moduli .vcard').forEach(c => { c.hidden = !(area === 'tutti' || c.dataset.area === area); });
+    };
+    filtri.addEventListener('click', (e) => { const c = e.target.closest('.chip'); if (c) filtra(c.dataset.area); });
+    document.querySelectorAll('[data-filtro]').forEach(a => a.addEventListener('click', () => filtra('tutti')));
+  }
 
   // durate (indice.json scritto con i video)
   fetch('video/indice.json').then(r => r.ok ? r.json() : {}).then(ix => {
@@ -49,7 +52,7 @@
 
   // «Scrivici»: Gmail, Outlook, programma di posta, copia dell'indirizzo (il solo mailto non fa nulla senza un programma di posta)
   const md = document.getElementById('mailDlg'), cp = document.getElementById('mailCopy');
-  document.getElementById('scrivici').addEventListener('click', () => { if (md.showModal) md.showModal(); else md.setAttribute('open', ''); });
+  document.querySelectorAll('#scrivici, .js-scrivici').forEach(b => b.addEventListener('click', () => { if (md.showModal) md.showModal(); else md.setAttribute('open', ''); }));
   document.getElementById('mailClose').addEventListener('click', () => md.close());
   md.addEventListener('click', (e) => { if (e.target === md) md.close(); });
   cp.addEventListener('click', async () => {
@@ -58,6 +61,19 @@
     catch (e) { const t = document.createElement('textarea'); t.value = 'fse@gp1.it'; document.body.appendChild(t); t.select();
       try { document.execCommand('copy'); ok(); } catch (_) {} t.remove(); }
   });
+
+  // immagini ingrandite (pagine dei prodotti)
+  const lb = document.getElementById('lightbox');
+  if (lb) {
+    const li = document.getElementById('lbImg'), lc = document.getElementById('lbCap');
+    document.addEventListener('click', (e) => {
+      const z = e.target.closest('.zoom'); if (!z) return;
+      li.src = z.dataset.src; li.alt = z.dataset.cap || ''; lc.textContent = z.dataset.cap || '';
+      if (lb.showModal) lb.showModal(); else lb.setAttribute('open', '');
+    });
+    document.getElementById('lbClose').addEventListener('click', () => lb.close());
+    lb.addEventListener('click', (e) => { if (e.target === lb || e.target === li) lb.close(); });
+  }
 
   // menu su telefono
   const t = document.getElementById('navToggle'), nav = document.getElementById('nav');

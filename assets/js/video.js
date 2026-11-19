@@ -10,7 +10,8 @@ window.GP1_VIDEO = {
     { id: 'clinica', nome: 'Area clinica' },
     { id: 'chirurgia', nome: 'Sala operatoria' },
     { id: 'amministrazione', nome: 'Amministrazione' },
-    { id: 'digitale', nome: 'Digitale e FSE' }
+    { id: 'digitale', nome: 'Digitale e FSE' },
+    { id: 'nutrizione', nome: 'Nutrizione' }
   ],
   moduli: [
     { id: 'booking-med', area: 'sportello', titolo: 'Booking Med', testo: 'Agenda di reparto, ricerca disponibilità per prestazione, liste d’attesa.' },
@@ -38,6 +39,7 @@ window.GP1_VIDEO = {
     { id: 'fse-sender', area: 'digitale', titolo: 'FSE Sender', testo: 'Pubblicazione dei referti sul Fascicolo Sanitario, maggior tutela inclusa.' },
     { id: 'message-med', area: 'digitale', titolo: 'Message Med', testo: 'La chat interna: messaggi diretti, gruppi, broadcast, annunci.' },
     { id: 'ai-med', area: 'digitale', titolo: 'AI Med', testo: 'L’intelligenza artificiale clinica, con provider e regole di privacy.' },
-    { id: 'em-helpdesk', area: 'digitale', titolo: 'EM Helpdesk', testo: 'Ticket interni e knowledge base con le soluzioni condivise.' }
+    { id: 'em-helpdesk', area: 'digitale', titolo: 'EM Helpdesk', testo: 'Ticket interni e knowledge base con le soluzioni condivise.' },
+    { id: 'threpsis', area: 'nutrizione', titolo: 'Threpsis', testo: 'Il software per nutrizionisti: dieta con fonti verificate, IA che impara, app per il paziente.' }
   ]
 };
